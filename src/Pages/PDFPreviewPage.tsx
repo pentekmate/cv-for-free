@@ -1,12 +1,12 @@
 
-import FormToCreateCV from './FormToCreateCV';
-import CVPreview from './CVPreview';
+import FormToCreateCV from '../Components/FormToCreateCV';
+import CVPreview from '../Components/CVPreview';
 
 
 export default function PDFPreviewPage (){
  
   return(
-  <div className='w-screen bg-red-900 h-screen flex'>
+  <div className='w-screen h-screen flex'>
     <div className='w-2/4'>
         <FormToCreateCV></FormToCreateCV>
     </div>

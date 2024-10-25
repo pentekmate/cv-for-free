@@ -4,7 +4,7 @@ export default function Home(){
     const navigate = useNavigate()
     return(
         <div>
-            <button onClick={()=>navigate('/createCV')}>CSinálok egy cvt</button>
+            <button onClick={()=>navigate('/createCV/templates')}>CSinálok egy cvt</button>
         </div>
     )
 }

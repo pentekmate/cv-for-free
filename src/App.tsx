@@ -2,11 +2,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./Components/Home";
-import PDFPreviewPage from "./Components/PDFPreviewPage";
+import Home from "./Pages/Home";
+import PDFPreviewPage from "./Pages/PDFPreviewPage";
 import './index.css'
 import { AppProvider } from "./Context/AppContext";
-
+import TemplatePage from "./Pages/TemplatePage";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,8 +15,12 @@ function App() {
       element: <Home></Home>
     },
     {
-      path: "/createCV",
+      path: "/createCV/edit",
       element: <PDFPreviewPage></PDFPreviewPage>
+    },
+    {
+      path: "/createCV/templates",
+      element: <TemplatePage></TemplatePage>
     },
   ]);
 
