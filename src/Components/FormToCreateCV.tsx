@@ -33,7 +33,7 @@ export default function FormToCreateCV(){
 
     return(
         <form className="flex flex-col px-10 w-full gap-4" action="">
-            <p className="font-bold text-[35px]">Személyes Adatok</p>
+            <p className="font-bold text-[35px] font-default-app-font">Személyes Adatok</p>
             <div className="flex gap-8 w-full">
                 <div className="flex flex-col w-full">
                     <label htmlFor="jobTitle">Betölteni kívánt munkakör</label>
@@ -74,7 +74,7 @@ export default function FormToCreateCV(){
                </div>
             </div>
             
-            <p className="font-bold text-[35px] mt-10">Szakmai Összefoglaló</p>
+            <p className="font-bold text-[35px] mt-10 font-default-app-font">Szakmai Összefoglaló</p>
             <div className="w-full flex flex-col">
                 <p >Írj magadról 2-4 mondatot.</p>
                 <LexicalComposer initialConfig={editorConfig}>
@@ -97,7 +97,7 @@ export default function FormToCreateCV(){
                 </LexicalComposer>
             </div>
 
-            <p className="font-bold text-[35px] mb-5">Korábbi munkahelyek</p>
+            <p className="font-bold text-[35px] mb-5 font-default-app-font">Korábbi munkahelyek</p>
             <div>
                 <div className="flex flex-col gap-4">
                     {prevJobs}

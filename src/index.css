@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 label{
-  @apply text-gray-400 font-semibold mb-1.5;
+  @apply text-gray-400 font-semibold font-default-app-font mb-1.5;
 }
 input{
     @apply text-[#666666] font-default-app-font;
