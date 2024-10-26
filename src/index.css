@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 label{
-    @apply text-gray-400 font-bold;
+    @apply text-[#666666] font-default-app-font;
 }
 input{
-    @apply bg-gray-200 h-[40px]
+    @apply bg-gray-100 h-[40px]
 }
 textarea{
     @apply bg-gray-200 

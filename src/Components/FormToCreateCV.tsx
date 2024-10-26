@@ -2,12 +2,12 @@ import { useState } from "react"
 import { useApp } from "../Context/AppContext"
 
 export default function FormToCreateCV(){
-    const {setName}=useApp()
+    const {setName,setJobTitle,setEmail,setCity,setCountry,setPhoneNumber,setIntroduce,setPreviousJobs}=useApp()
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     return(
-        <form className="flex flex-col  w-full" action="">
-            <p className="font-bold text-[35px]">Személyes Adatok</p>
+        <form className="flex flex-col gap-4 px-10 w-full" action="">
+            <p className="font-bold text-[35px] font-title-font">Személyes Adatok</p>
             <div className="flex gap-4 w-full">
                 <div className="flex flex-col w-full">
                     <label htmlFor="jobTitle">Betölteni kívánt munkakör</label>
@@ -19,7 +19,7 @@ export default function FormToCreateCV(){
             </div>
             <div className="flex gap-4 w-full">
                 <div className="flex flex-col  w-full">
-                    <label htmlFor="firstName">Vezetéknév</label>
+                    <label htmlFor="firstName font">Vezetéknév</label>
                     <input type="text" name="firstName" onChange={(e)=>setFirstName(e.target.value)}/>
                 </div>
                 <div className="flex flex-col  w-full">
@@ -35,7 +35,7 @@ export default function FormToCreateCV(){
                 </div>
                 <div className="flex flex-col w-full">
                     <label htmlFor="phoneNumber">Telefonszám</label>
-                    <input type="text" name="phoneNumber" onChange={(e)=>setphoneNumber(e.target.value)}/>
+                    <input type="text" name="phoneNumber" onChange={(e)=>setPhoneNumber(Number(e.target.value))}/>
                 </div>
             </div>
             <div className="flex gap-4 w-full">
@@ -48,9 +48,9 @@ export default function FormToCreateCV(){
                     <input type="text" name="city" onChange={(e)=>setCity(e.target.value)}/>
                </div>
             </div>
-            <p className="font-bold text-[35px] mt-10">Szakmai Összefoglaló</p>
+            <p className="font-bold text-[35px] mt-10 font-title-font">Szakmai Összefoglaló</p>
             <label htmlFor="desription">Írj magadról 2-4 mondatot.</label>
-            <textarea name="description"></textarea>
+            <textarea name="description" onChange={(e)=>setIntroduce(e.target.value)}></textarea>
 
             <p>Korábbi munkahelyek</p>
 
