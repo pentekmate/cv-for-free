@@ -6,7 +6,7 @@ label{
   @apply text-gray-400 font-semibold mb-1.5;
 }
 input{
-  @apply bg-gray-200 h-[40px] rounded-md
+    @apply text-[#666666] font-default-app-font;
 }
 textarea{
   @apply bg-gray-200 rounded-md

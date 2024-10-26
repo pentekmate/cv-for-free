@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+       'default-app-font':  "Inter",
+       'title-font':"Poppins",
+      }
+    },
   },
   plugins: [],
 }

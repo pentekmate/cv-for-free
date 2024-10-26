@@ -12,26 +12,26 @@ export type AppContextType ={
     jobTitle?:string | null,
     profPicture?:string | null,
     introduce?:string | null,
-    previousJobs?:PreviousJob[] | null,
+    previousJobs:PreviousJob[] | null,
     skills?:Skill[] | null,
     schools?:School[] | null,
     socials?:Social[] | null,
     languages?:Language[] | null,
 
     setName?:(name : string)=>void;
-    setEmail?:(email : string)=>void;
-    setPhoneNumber?:(phoneNumber:number)=>void;
-    setCountry?:(country:string)=>void;
-    setCity?:(city:string)=>void;
-    setJobTitle?:(jobTitle:string)=>void;
+    setEmail:(email : string)=>void;
+    setPhoneNumber:(phoneNumber:number)=>void;
+    setCountry:(country:string)=>void;
+    setCity:(city:string)=>void;
+    setJobTitle:(jobTitle:string)=>void;
     setProfPicture?:(profPicture:string)=>void;
-    setIntroduce?:(introduce:string)=>void;
+    setIntroduce:(introduce:string)=>void;
 
-    setPreviousJobs?:(previousJob:PreviousJob)=>void;
+    setPreviousJobs:React.Dispatch<React.SetStateAction<PreviousJob[] | null>>;
 
     setSkills?:(skill:Skill)=>void;
 
-    setSchools?:(school:School)=>void;
+    setSchools:React.Dispatch<React.SetStateAction<School[] | null>>;
 
     setSocials?:(social:Social)=>void;
 
@@ -47,11 +47,41 @@ export type TemplateTypes = {
     id: number;
     styles: {
         page: {
-            backgroundColor: string;
-        };
+            height?:string,
+            width?:string,
+            paddingBlock?:string,
+            backgroundColor?: string;
+            paddingInline?:string
+        },
+        profileContainer?:{
+            backgroundColor?:string,
+            width?:string,
+            height?:string
+        },
+        nameTag?:{
+            fontFamily?:string,
+            fontSize?:string,
+            fontWeight?:string,
+        },
+        jobTitle?:{
+            fontFamily?:string,
+            fontSize?:string,
+            marginTop?:string, 
+        },
+        PersonalInfo?:{
+            fontSize?:string,
+            fontFamily?:string
+        },
+        ContentContainer?:{
+            display?:string,
+            flexDirection?:string,
+            gap?:string
+        }
+
     };
 };
 export type PreviousJob={
+    id:number,
     jobTitle:string,
     employer:string,
     beginDate:Date,
@@ -61,10 +91,12 @@ export type PreviousJob={
 }
 
 export type Skill = {
+    id:number,
     skillName:string,
     skillLevel:number
 }
 export type School={
+    id:number,
     schoolName:string,
     degree:string,
     beginDate: Date,

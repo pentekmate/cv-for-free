@@ -19,7 +19,7 @@ export default function FormToCreateCV(){
         nodes: [],
         theme: ExampleTheme,
     };
-    const {setName}=useApp()
+    const {setName,setJobTitle,setEmail,setCity,setCountry,setPhoneNumber,setIntroduce,setPreviousJobs}=useApp()
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
 
@@ -45,7 +45,7 @@ export default function FormToCreateCV(){
             </div>
             <div className="flex gap-8 w-full">
                 <div className="flex flex-col  w-full">
-                    <label htmlFor="firstName">Vezetéknév</label>
+                    <label htmlFor="firstName font">Vezetéknév</label>
                     <input type="text" name="firstName" onChange={(e)=>setFirstName(e.target.value)}/>
                 </div>
                 <div className="flex flex-col  w-full">
@@ -60,7 +60,7 @@ export default function FormToCreateCV(){
                 </div>
                 <div className="flex flex-col w-full">
                     <label htmlFor="phoneNumber">Telefonszám</label>
-                    <input type="text" name="phoneNumber" onChange={(e)=>setphoneNumber(e.target.value)}/>
+                    <input type="text" name="phoneNumber" onChange={(e)=>setPhoneNumber(Number(e.target.value))}/>
                 </div>
             </div>
             <div className="flex gap-8 w-full">
